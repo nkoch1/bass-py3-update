@@ -2880,7 +2880,7 @@ def poincare_batch(event_type, meas, Data, Settings, Results):
     else:
         sd1 = Series(index = Data['original'].columns)
         sd2 = Series(index = Data['original'].columns)
-        for key, value in measurement.iteritems():
+        for key, value in measurement.items():
 
             temp_list = value[meas].tolist() #copy the correct array into a list
 
@@ -3385,7 +3385,7 @@ def histent_wrapper(event_type, meas, Data, Settings, Results):
 
     else:
         temp_histent = Series(index = Data['original'].columns)
-        for key, value in measurement.iteritems():
+        for key, value in measurement.items():
 
             temp_list = value[meas].tolist() #copy the correct array into a list
 
@@ -3502,7 +3502,7 @@ def ap_entropy_wrapper(event_type, meas, Data, Settings, Results):
 
     else:
         temp_apent = Series(index = Data['original'].columns)
-        for key, value in measurement.iteritems():
+        for key, value in measurement.items():
 
             temp_list = value[meas].tolist() #copy the correct array into a list
             if temp_list[-1] != temp_list[-1]: #check if NaN
@@ -3605,7 +3605,7 @@ def samp_entropy_wrapper(event_type, meas, Data, Settings, Results):
 
     else:
         temp_sampent = Series(index = Data['original'].columns)
-        for key, value in measurement.iteritems():
+        for key, value in measurement.items():
 
             temp_list = value[meas].tolist() #copy the correct array into a list
             if temp_list[-1] != temp_list[-1]:
@@ -3727,7 +3727,7 @@ def moving_statistics(event_type, meas, window, Data, Settings, Results):
         sliding_mean = DataFrame(index= (np.arange(num)*window))
         sliding_std = DataFrame(index= (np.arange(num)*window))
 
-        for key, value in dictionary.iteritems():
+        for key, value in dictionary.items():
 
             temp_count = Series(index= (np.arange(num)*window))
             temp_mean = Series(index= (np.arange(num)*window))
